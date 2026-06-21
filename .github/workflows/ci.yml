@@ -10,8 +10,15 @@ on:
 jobs:
   hello-job:
     runs-on: ubuntu-latest
+    
 
     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: show files
+        run: ls -la
+          
       - name: print message
         run: echo "Hello from GitHub Actions"
 
