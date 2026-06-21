@@ -1,20 +1,24 @@
 name: First Pipeline
 
-
-
 on:
   push:
     branches: [main]
-
 
 jobs:
   hello-job:
     runs-on: ubuntu-latest
     
-
     steps:
       - name: checkout code
         uses: actions/checkout@v4
+      
+      - name: setup Node.js
+        uses: actions/setup-node@v4
+        whith:
+          node-version: 22
+       
+      - name: show Node version
+        run: node --version
 
       - name: show files
         run: ls -la
