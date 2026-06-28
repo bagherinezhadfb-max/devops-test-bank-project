@@ -44,6 +44,11 @@ jobs:
           name: my-build
           path: build/
 
+      - name: Deploy application
+        run: |
+          echo "Starting Deploy..."
+          echo "Application deployed successfully"     
+             
       - name: print message
         run: echo "Hello from GitHub Actions"
 
