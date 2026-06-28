@@ -38,6 +38,11 @@ jobs:
       - name: show build artifact
         run: ls -la build
 
+      - name: Broken Step
+        run: |
+          echo "Start Debbuging"
+          exit: 1
+
       - name: print message
         run: echo "Hello from GitHub Actions"
 
