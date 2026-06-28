@@ -30,6 +30,11 @@ jobs:
           echo "Test2 passed"
           echo "All tests passed"
 
+      - name: Build Project
+        run: |
+          mkdir build
+          echo "Application Build Success" > build/app.txt
+
       - name: print message
         run: echo "Hello from GitHub Actions"
 
