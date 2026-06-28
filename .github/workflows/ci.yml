@@ -38,10 +38,11 @@ jobs:
       - name: show build artifact
         run: ls -la build
 
-      - name: Broken Step
-        run: |
-          echo "Start Debbuging"
-          exit 1
+      - name: upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-build
+          path: build/
 
       - name: print message
         run: echo "Hello from GitHub Actions"
