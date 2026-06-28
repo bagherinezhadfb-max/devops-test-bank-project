@@ -34,8 +34,11 @@ jobs:
         run: |
           mkdir build
           echo "Application Build Success" > build/app.txt
+        
+      - name: show build artifact
+        run: ls -la build
 
       - name: print message
         run: echo "Hello from GitHub Actions"
 
-
+       
